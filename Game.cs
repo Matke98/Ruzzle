@@ -13,8 +13,33 @@ namespace Ruzzle
 
         public static RuzzleBoxControl[,] Table { get { return _table;} set { _table = value; } }
 
+        public static string UserWord
+        {
+            get;
+            set;
+        }
+        public static int TotalPoints
+        {
+            get;
+            set;
+        }
+        public static int TempPoints
+        {
+            get;
+            set;
+        }
+        public static List<string> EnteredWords
+        {
+            get;
+            set;
+        }
+
         public static bool NewGame()
         {
+            EnteredWords = new List<string>();
+            UserWord = "";
+            TotalPoints = 0;
+            TempPoints = 0;
             //COORDINATE DOVE VERRANNO DISEGNATI I CONTROLLI
             int x = 50;
             int y = 50;
@@ -41,7 +66,6 @@ namespace Ruzzle
             }
             else return false;
         }
-
         public static List<RuzzleBoxControl> FromIDs(List<IDBox> IDs)
         {
             List<RuzzleBoxControl> list = new List<RuzzleBoxControl>();
@@ -55,7 +79,7 @@ namespace Ruzzle
                     //}
                     if (box.ID.Column == item.Column && box.ID.Row == item.Row)
                     {
-                        ReEnable(Table[item.Row, item.Column]);
+                        list.Add(box);
                     }
                 }
 
@@ -63,9 +87,36 @@ namespace Ruzzle
             }
             return list;
         }
-        public static void ReEnable(RuzzleBoxControl box) 
+        public static void ReEnable(List<RuzzleBoxControl> list) 
         {
-            box.ClickAvailable = true;
+            foreach(var item in list)
+            {
+                item.ClickAvailable = true;
+            }
+        }
+        public static void ReEnable() //POLYMORPHISM!!!1!!!
+        {
+            foreach(var item in Table)
+            {
+                item.ClickAvailable = true;
+            }
+        } 
+        public static void UnselectAll()
+        {
+            foreach (var item in Table)
+            {
+                item.Selected = false;
+                item.Invalidate();
+            }
+        }
+        public static bool AlreadyUsed(string word)
+        {
+            foreach (var item in EnteredWords)
+            {
+                if (item == word)
+                    return true;
+            }
+            return false;
         }
     }
 }

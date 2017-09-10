@@ -28,20 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PointsLBL = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(221, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Conferma";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(222, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "PUNTEGGIO:";
+            // 
+            // PointsLBL
+            // 
+            this.PointsLBL.AutoSize = true;
+            this.PointsLBL.Location = new System.Drawing.Point(302, 22);
+            this.PointsLBL.Name = "PointsLBL";
+            this.PointsLBL.Size = new System.Drawing.Size(13, 13);
+            this.PointsLBL.TabIndex = 3;
+            this.PointsLBL.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(358, 262);
+            this.Controls.Add(this.PointsLBL);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label PointsLBL;
     }
 }
 

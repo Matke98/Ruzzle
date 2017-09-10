@@ -12,7 +12,6 @@ C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.Form1.resources
 C:\Users\Giulia\Desktop\Ruzzle\bin\Debug\Ruzzle.exe.config
 C:\Users\Giulia\Desktop\Ruzzle\bin\Debug\Ruzzle.exe
 C:\Users\Giulia\Desktop\Ruzzle\bin\Debug\Ruzzle.pdb
-C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.csprojResolveAssemblyReference.cache
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.Form1.resources
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.Properties.Resources.resources
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.RuzzleBoxControl.resources

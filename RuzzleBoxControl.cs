@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Ruzzle
 {
@@ -45,13 +46,17 @@ namespace Ruzzle
         {
             if (ClickAvailable && !Selected)
             {
+                SoundPlayer click = new SoundPlayer("media/click.wav");
+                click.Play();
                 Selected = (Selected) ? false : true;
                 Invalidate();
                 foreach (var item in Game.Table)
                 {
                     item.ClickAvailable = false;
                 }
-                Game.FromIDs(ID.NearThis());
+                Game.ReEnable(Game.FromIDs(ID.NearThis()));
+                Game.UserWord += Letter;
+                Game.TempPoints += Points;
             }
 
         }
