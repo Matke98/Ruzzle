@@ -1,0 +1,11 @@
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.csprojResolveAssemblyReference.cache
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.Properties.Resources.resources
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.RuzzleBoxControl.resources
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.csproj.GenerateResource.Cache
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.csproj.CoreCompileInputs.cache
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\bin\Debug\Ruzzle.exe.config
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\bin\Debug\Ruzzle.exe
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\bin\Debug\Ruzzle.pdb
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.exe
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.pdb
+C:\Users\Julie\source\repos\Ruzzle\Ruzzle\obj\Debug\Ruzzle.Form1.resources
