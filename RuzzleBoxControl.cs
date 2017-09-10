@@ -67,7 +67,6 @@ namespace Ruzzle
             BackColor = (Selected) ? Color.Red : Color.Orange;
             e.Graphics.DrawString(Letter.ToString(), new Font("Arial", 20), Brushes.Black, new Point(12, 10));
             e.Graphics.DrawString(Points.ToString(), new Font("Arial", 10), Brushes.Black, new Point(0, 0));
-            e.Graphics.DrawString(ID.Row.ToString() + "," + ID.Column.ToString(), new Font("Arial", 10), Brushes.Black, new Point(30, 30));
         }
 
 

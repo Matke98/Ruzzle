@@ -32,7 +32,7 @@ namespace Ruzzle
             
             if (ItalianWordList.Search(word) && !Game.AlreadyUsed(word))
             {
-                label1.Text += word + "\n";
+                
                 Game.TotalPoints += Game.TempPoints;
                 PointsLBL.Text = Game.TotalPoints.ToString();
                 Game.UnselectAll();
@@ -50,5 +50,11 @@ namespace Ruzzle
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu mainMenu = new Menu();
+            Hide();
+            mainMenu.Show();
+        }
     }
 }

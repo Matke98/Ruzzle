@@ -19,3 +19,6 @@ C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.csproj.GenerateResource.Cache
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.csproj.CoreCompileInputs.cache
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.exe
 C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.pdb
+C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.Menu.resources
+C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.csprojResolveAssemblyReference.cache
+C:\Users\Giulia\Desktop\Ruzzle\obj\Debug\Ruzzle.Leaderboard.resources

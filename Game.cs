@@ -118,5 +118,25 @@ namespace Ruzzle
             }
             return false;
         }
+        public static void Hide()
+        {
+            foreach (var item in Table)
+            {
+                item.Hide();
+            }
+        }
+        public static void Show()
+        {
+            foreach (var item in Table)
+            {
+                item.Show();       
+            }
+        }
+        public static int BonusPoints(string word)
+        {
+            if (word.Length > 5)
+                return 5 * (word.Length - 5);
+            else return 0;
+        }
     }
 }
