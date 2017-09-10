@@ -22,5 +22,26 @@ namespace Ruzzle
                 return true;
             else return false;
         }
+        public List<IDBox> NearThis()
+        {
+            List<IDBox> list = new List<IDBox>();
+            if (Column + 1 < 4) //A DESTRA
+                list.Add(new IDBox(Row, Column + 1));
+            if (Column - 1 >= 0) //A SINISTRA
+                list.Add(new IDBox(Row, Column - 1));
+            if (Row - 1 >= 0) //IN ALTO
+                list.Add(new IDBox(Row - 1, Column));
+            if (Row + 1 < 4) //IN BASSO
+                list.Add(new IDBox(Row + 1, Column));
+            if (Row + 1 < 4 && Column + 1 < 4) //IN BASSO A DESTRA
+                list.Add(new IDBox(Row + 1, Column + 1));
+            if (Row + 1 < 4 && Column - 1 >= 0) //IN BASSO A SINISTRA
+                list.Add(new IDBox(Row + 1, Column - 1));
+            if (Row - 1 >= 0 && Column + 1 < 4) //IN ALTO A DESTRA
+                list.Add(new IDBox(Row - 1, Column + 1));
+            if (Row - 1 >= 0 && Column - 1 >= 0) //IN ALTO A SINISTRA
+                list.Add(new IDBox(Row - 1, Column - 1));
+            return list;
+        }
     }
 }

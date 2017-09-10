@@ -47,26 +47,25 @@ namespace Ruzzle
             List<RuzzleBoxControl> list = new List<RuzzleBoxControl>();
             foreach (var item in IDs)
             {
-                for (int i = 0; i < 4; i++)
+                foreach (var box in Table) 
                 {
-                    for (int j = 0; j < 4; j++)
+                    //if (box.ID == item) //PROBABILMENTE EQUALS DI IDBOX NON FUNZIONANTE
+                    //{
+                    //    ReEnable(Table[item.Row, item.Column]);
+                    //}
+                    if (box.ID.Column == item.Column && box.ID.Row == item.Row)
                     {
-                        if (Table[i, j].ID == item)
-                        {
-                            list.Add(Table[i, j]);
-                        }
+                        ReEnable(Table[item.Row, item.Column]);
                     }
-
                 }
+
+
             }
             return list;
         }
-        public static void ReEnable(List<RuzzleBoxControl> list)
+        public static void ReEnable(RuzzleBoxControl box) 
         {
-            foreach(var item in list)
-            {
-                item.ClickAvailable = true;
-            }
+            box.ClickAvailable = true;
         }
     }
 }

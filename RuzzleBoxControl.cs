@@ -18,7 +18,7 @@ namespace Ruzzle
         private int _points; //PUNTEGGIO DELLA CASELLA
         private bool _selected; //SELEZIONATA PER COMPORRE LA PAROLA
         private bool _clickAvailable; //POSSO CLICCARE IL CONTROLLO IN QUESTO MOMENTO?
-        private IDBox _id; 
+        private IDBox _id;
 
         //PROPRIETA'
         public char Letter { get { return _letter; } private set { _letter = value; } }
@@ -38,12 +38,12 @@ namespace Ruzzle
             Paint += RuzzleBoxControl_Paint;
             Click += RuzzleBoxControl_Click;
             ID = new IDBox(Column, Row);
-            
+
         }
 
         private void RuzzleBoxControl_Click(object sender, EventArgs e)
         {
-            if (ClickAvailable)
+            if (ClickAvailable && !Selected)
             {
                 Selected = (Selected) ? false : true;
                 Invalidate();
@@ -51,7 +51,7 @@ namespace Ruzzle
                 {
                     item.ClickAvailable = false;
                 }
-                Game.ReEnable(Game.FromIDs(NearThis()));
+                Game.FromIDs(ID.NearThis());
             }
 
         }
@@ -74,7 +74,7 @@ namespace Ruzzle
         {
             char[] alphabet = "ABCDEFGHILMNOPQRSTUVZ".ToCharArray();
 
-            return alphabet[RND.Next(0,21)];
+            return alphabet[RND.Next(0, 21)];
         }
 
         /// <summary>
@@ -84,27 +84,6 @@ namespace Ruzzle
         private int RandomPoints()
         {
             return RND.Next(1, 6);
-        }
-        private List<IDBox> NearThis()
-        {
-            List<IDBox> list = new List<IDBox>();
-            if (ID.Column +  1 < 4) //A DESTRA
-                list.Add(new IDBox(ID.Row, ID.Column + 1));
-            if (ID.Column - 1 >= 0) //A SINISTRA
-                list.Add(new IDBox(ID.Row, ID.Column - 1));
-            if (ID.Row - 1 >= 0) //IN ALTO
-                list.Add(new IDBox(ID.Row, ID.Column + 1));
-            if (ID.Row + 1 < 4) //IN BASSO
-                list.Add(new IDBox(ID.Row + 1, ID.Column));
-            if (ID.Row + 1 < 4 && ID.Column + 1 < 4 ) //IN BASSO A DESTRA
-                list.Add(new IDBox(ID.Row + 1, ID.Column + 1));
-            if (ID.Row + 1 < 4 && ID.Column - 1 > 0) //IN BASSO A SINISTRA
-                list.Add(new IDBox(ID.Row + 1, ID.Column - 1));
-            if (ID.Row - 1 > 0 && ID.Column + 1 < 4) //IN ALTO A DESTRA
-                list.Add(new IDBox(ID.Row - 1, ID.Column + 1));
-            if (ID.Row - 1 < 4 && ID.Column - 1 > 0) //IN ALTO A SINISTRA
-                list.Add(new IDBox(ID.Row - 1, ID.Column - 1));
-            return list;
         }
     }
 }
